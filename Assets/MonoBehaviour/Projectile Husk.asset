@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07e7aa04a3dcfacc826789b2d1e8174, type: 3}
+  m_Name: Projectile Husk
+  m_EditorClassIdentifier:
+  objectName: Tall Husk
+  gameObject: {fileID: 1855711009667749, guid: ec5f837e5707aba4bb2215bf8a1b8273, type: 2}
+  preview: {fileID: 1237810575115278, guid: 945cb23bba20101449bdcbfff1b7f0eb, type: 2}
+  gridIcon: {fileID: 21300000, guid: afec856f7a3fd4049824a23078609b89, type: 2}
+  backgroundColor: {r: 0.8980392, g: 0.65882355, b: 0.65882355, a: 1}

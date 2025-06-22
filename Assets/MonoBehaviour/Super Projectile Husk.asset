@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07e7aa04a3dcfacc826789b2d1e8174, type: 3}
+  m_Name: Super Projectile Husk
+  m_EditorClassIdentifier:
+  objectName: Super Projectile Husk
+  gameObject: {fileID: 1830176448366710, guid: 5a50796aff4f1b340aad50a5451c5585, type: 2}
+  preview: {fileID: 1354478700947031, guid: b4decca24844e654e8948f428459c87f, type: 2}
+  gridIcon: {fileID: 21300000, guid: 897d101eae1400f45b0e2dc1c43d3b4f, type: 2}
+  backgroundColor: {r: 0.8980392, g: 0.65882355, b: 0.65882355, a: 1}
