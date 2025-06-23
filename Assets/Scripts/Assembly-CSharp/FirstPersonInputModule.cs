@@ -18,7 +18,7 @@ public class FirstPersonInputModule : StandaloneInputModule
 		Cursor.lockState = CursorLockMode.None;
 		base.ProcessMove(pointerEvent);
 		Cursor.lockState = lockState;
-	}
+    }
 
 	protected override void ProcessDrag(PointerEventData pointerEvent)
 	{

@@ -7,6 +7,9 @@ public class KEEPMOUSEINGAYBABYJAIL : MonoBehaviour
 {
     public GameObject PauseMenu;
     public GameObject OptionsMenu;
+    public GameObject Intro;
+    public GameObject Intro2;
+    public bool UsingIntro;
     void Update()
     {
         if (PauseMenu.activeSelf || OptionsMenu.activeSelf)
@@ -14,7 +17,19 @@ public class KEEPMOUSEINGAYBABYJAIL : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else
+        if (UsingIntro == true)
+        {
+            if (Intro.activeSelf || Intro2.activeSelf)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            if (!Intro.activeSelf && !Intro2.activeSelf)
+            {
+                UsingIntro = false;
+            }
+        }
+        if (!PauseMenu.activeSelf && !OptionsMenu.activeSelf && !Intro.activeSelf && !Intro2.activeSelf)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

@@ -1303,13 +1303,6 @@ struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B_marshaled_com : publi
 	intptr_t ___m_Ptr_0;
 };
 
-// UnityEngine.CursorLockMode
-struct CursorLockMode_tB70C7D1B9208B821C1C8A614BE904500B92C47D2 
-{
-	// System.Int32 UnityEngine.CursorLockMode::value__
-	int32_t ___value___2;
-};
-
 // EnemyType
 struct EnemyType_t03DA94B0DF10A2D83B2BF1A4A8B59E2C86AAE48E 
 {
@@ -4637,10 +4630,6 @@ struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields
 
 // UnityEngine.Coroutine
 
-// UnityEngine.CursorLockMode
-
-// UnityEngine.CursorLockMode
-
 // EnemyType
 
 // EnemyType
@@ -6488,10 +6477,6 @@ inline Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* GameObject_GetCompon
 }
 // System.Void UnityEngine.Rigidbody::AddForce(UnityEngine.Vector3,UnityEngine.ForceMode)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_force, int32_t ___1_mode, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Cursor::set_lockState(UnityEngine.CursorLockMode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9 (int32_t ___0_value, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Cursor::set_visible(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cursor_set_visible_m612FCB2E86C15F91CE2E6148D1B556667954A2B7 (bool ___0_value, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<UnityEngine.Camera>()
 inline Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -14887,10 +14872,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_Start_m8EAAC188934ECCBD
 		L_2 = GameObject_GetComponent_TisNewMovement_t39D16377D058E0CCBAB8C516F2878FE33A0226BC_m60AB5462543CBF731A4187C003630A48EA309826(L_1, GameObject_GetComponent_TisNewMovement_t39D16377D058E0CCBAB8C516F2878FE33A0226BC_m60AB5462543CBF731A4187C003630A48EA309826_RuntimeMethod_var);
 		__this->___pm_15 = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___pm_15), (void*)L_2);
-		// Cursor.lockState = CursorLockMode.Locked;
-		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(1, NULL);
-		// Cursor.visible = false;
-		Cursor_set_visible_m612FCB2E86C15F91CE2E6148D1B556667954A2B7((bool)0, NULL);
 		// cam = GetComponent<Camera>();
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_3;
 		L_3 = Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4(__this, Component_GetComponent_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_m64AC6C06DD93C5FB249091FEC84FA8475457CCC4_RuntimeMethod_var);
@@ -14907,7 +14888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_Start_m8EAAC188934ECCBD
 		bool L_6 = L_5->___majorEnabled_4;
 		if (!L_6)
 		{
-			goto IL_0064;
+			goto IL_0058;
 		}
 	}
 	{
@@ -14915,16 +14896,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraController_Start_m8EAAC188934ECCBD
 		AssistController_t28B797D3E66524671277800FC987766135BDE07B* L_7 = __this->___asscon_33;
 		float L_8 = L_7->___gameSpeed_5;
 		__this->___timeScale_35 = L_8;
-		goto IL_006f;
+		goto IL_0063;
 	}
 
-IL_0064:
+IL_0058:
 	{
 		// timeScale = 1f;
 		__this->___timeScale_35 = (1.0f);
 	}
 
-IL_006f:
+IL_0063:
 	{
 		// Time.timeScale = timeScale * timeScaleModifier;
 		float L_9 = __this->___timeScale_35;
@@ -15009,10 +14990,10 @@ IL_006f:
 		V_0 = L_39;
 		// for (int i = 0; i < array.Length; i++)
 		V_1 = 0;
-		goto IL_0195;
+		goto IL_0189;
 	}
 
-IL_017e:
+IL_0172:
 	{
 		// array[i].SetFloat("allPitch", 1f);
 		AudioMixerU5BU5D_tB69560F6B338DBC5685BACF22A873E3F7223086F* L_40 = V_0;
@@ -15026,14 +15007,14 @@ IL_017e:
 		V_1 = ((int32_t)il2cpp_codegen_add(L_45, 1));
 	}
 
-IL_0195:
+IL_0189:
 	{
 		// for (int i = 0; i < array.Length; i++)
 		int32_t L_46 = V_1;
 		AudioMixerU5BU5D_tB69560F6B338DBC5685BACF22A873E3F7223086F* L_47 = V_0;
 		if ((((int32_t)L_46) < ((int32_t)((int32_t)(((RuntimeArray*)L_47)->max_length)))))
 		{
-			goto IL_017e;
+			goto IL_0172;
 		}
 	}
 	{

@@ -3215,6 +3215,12 @@ struct KEEPMOUSEINGAYBABYJAIL_tB13E193FEA96C06035A858E2588C2D1C0E6162D0  : publi
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PauseMenu_4;
 	// UnityEngine.GameObject KEEPMOUSEINGAYBABYJAIL::OptionsMenu
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___OptionsMenu_5;
+	// UnityEngine.GameObject KEEPMOUSEINGAYBABYJAIL::Intro
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Intro_6;
+	// UnityEngine.GameObject KEEPMOUSEINGAYBABYJAIL::Intro2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Intro2_7;
+	// System.Boolean KEEPMOUSEINGAYBABYJAIL::UsingIntro
+	bool ___UsingIntro_8;
 };
 
 // KillChallenge
@@ -17360,7 +17366,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KEEPMOUSEINGAYBABYJAIL_Update_mE459D91EE
 		L_3 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_2, NULL);
 		if (!L_3)
 		{
-			goto IL_0027;
+			goto IL_0026;
 		}
 	}
 
@@ -17370,15 +17376,117 @@ IL_001a:
 		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(0, NULL);
 		// Cursor.visible = true;
 		Cursor_set_visible_m612FCB2E86C15F91CE2E6148D1B556667954A2B7((bool)1, NULL);
-		return;
 	}
 
-IL_0027:
+IL_0026:
+	{
+		// if (UsingIntro == true)
+		bool L_4 = __this->___UsingIntro_8;
+		if (!L_4)
+		{
+			goto IL_0075;
+		}
+	}
+	{
+		// if (Intro.activeSelf || Intro2.activeSelf)
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___Intro_6;
+		bool L_6;
+		L_6 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_5, NULL);
+		if (L_6)
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___Intro2_7;
+		bool L_8;
+		L_8 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_7, NULL);
+		if (!L_8)
+		{
+			goto IL_0054;
+		}
+	}
+
+IL_0048:
+	{
+		// Cursor.lockState = CursorLockMode.None;
+		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(0, NULL);
+		// Cursor.visible = true;
+		Cursor_set_visible_m612FCB2E86C15F91CE2E6148D1B556667954A2B7((bool)1, NULL);
+	}
+
+IL_0054:
+	{
+		// if (!Intro.activeSelf && !Intro2.activeSelf)
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___Intro_6;
+		bool L_10;
+		L_10 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_9, NULL);
+		if (L_10)
+		{
+			goto IL_0075;
+		}
+	}
+	{
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___Intro2_7;
+		bool L_12;
+		L_12 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_11, NULL);
+		if (L_12)
+		{
+			goto IL_0075;
+		}
+	}
+	{
+		// UsingIntro = false;
+		__this->___UsingIntro_8 = (bool)0;
+	}
+
+IL_0075:
+	{
+		// if (!PauseMenu.activeSelf && !OptionsMenu.activeSelf && !Intro.activeSelf && !Intro2.activeSelf)
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->___PauseMenu_4;
+		bool L_14;
+		L_14 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_13, NULL);
+		if (L_14)
+		{
+			goto IL_00b5;
+		}
+	}
+	{
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = __this->___OptionsMenu_5;
+		bool L_16;
+		L_16 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_15, NULL);
+		if (L_16)
+		{
+			goto IL_00b5;
+		}
+	}
+	{
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = __this->___Intro_6;
+		bool L_18;
+		L_18 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_17, NULL);
+		if (L_18)
+		{
+			goto IL_00b5;
+		}
+	}
+	{
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = __this->___Intro2_7;
+		bool L_20;
+		L_20 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_19, NULL);
+		if (L_20)
+		{
+			goto IL_00b5;
+		}
+	}
 	{
 		// Cursor.lockState = CursorLockMode.Locked;
 		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(1, NULL);
 		// Cursor.visible = false;
 		Cursor_set_visible_m612FCB2E86C15F91CE2E6148D1B556667954A2B7((bool)0, NULL);
+	}
+
+IL_00b5:
+	{
 		// }
 		return;
 	}

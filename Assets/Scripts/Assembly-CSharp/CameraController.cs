@@ -100,8 +100,6 @@ public class CameraController : MonoBehaviour
 	{
 		player = GameObject.FindWithTag("Player");
 		pm = player.GetComponent<NewMovement>();
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
 		cam = GetComponent<Camera>();
 		asscon = Object.FindObjectOfType<AssistController>();
 		if (asscon.majorEnabled)

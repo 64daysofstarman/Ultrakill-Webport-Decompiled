@@ -1713,13 +1713,6 @@ struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B_marshaled_com : publi
 	intptr_t ___m_Ptr_0;
 };
 
-// UnityEngine.CursorLockMode
-struct CursorLockMode_tB70C7D1B9208B821C1C8A614BE904500B92C47D2 
-{
-	// System.Int32 UnityEngine.CursorLockMode::value__
-	int32_t ___value___2;
-};
-
 // System.DateTimeKind
 struct DateTimeKind_t3AD6DA06BEF8955A740777163FFB481C19089BBC 
 {
@@ -5683,10 +5676,6 @@ struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields
 
 // UnityEngine.Coroutine
 
-// UnityEngine.CursorLockMode
-
-// UnityEngine.CursorLockMode
-
 // System.DateTimeKind
 
 // System.DateTimeKind
@@ -7274,10 +7263,6 @@ inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Object_Instantiate_
 }
 // System.Void UnityEngine.GameObject::SetActive(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___0_value, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Cursor::set_visible(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cursor_set_visible_m612FCB2E86C15F91CE2E6148D1B556667954A2B7 (bool ___0_value, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Cursor::set_lockState(UnityEngine.CursorLockMode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9 (int32_t ___0_value, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Animator::SetBool(System.Int32,System.Boolean)
@@ -10120,10 +10105,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugArm_PreviewObject_m2FADDC22CD75BCE4
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
 		L_7 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_6, NULL);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_7, (bool)0, NULL);
-		// Cursor.visible = false;
-		Cursor_set_visible_m612FCB2E86C15F91CE2E6148D1B556667954A2B7((bool)0, NULL);
-		// Cursor.lockState = CursorLockMode.Locked;
-		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(1, NULL);
 		// cameraCtrl.enabled = true;
 		CameraController_tDC4FF0FA10418272A26E5E7539156F4F4A98E8C5* L_8 = __this->___cameraCtrl_5;
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_8, (bool)1, NULL);
@@ -10136,7 +10117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugArm_PreviewObject_m2FADDC22CD75BCE4
 		L_11 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_10, NULL);
 		if (!L_11)
 		{
-			goto IL_0072;
+			goto IL_0066;
 		}
 	}
 	{
@@ -10146,7 +10127,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugArm_PreviewObject_m2FADDC22CD75BCE4
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_12, NULL);
 	}
 
-IL_0072:
+IL_0066:
 	{
 		// currentPreview = gameObject;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = V_0;
@@ -10328,7 +10309,7 @@ IL_00cc:
 		L_28 = Input_GetButtonDown_mEF5F80C9E8F04104E807D9CBD6F70CDB98751579(_stringLiteralE16EFE13C5C08096A869677E0912595D5D6C1C03, NULL);
 		if (!L_28)
 		{
-			goto IL_010d;
+			goto IL_0101;
 		}
 	}
 	{
@@ -10343,13 +10324,9 @@ IL_00cc:
 		// gunCtrl.enabled = false;
 		GunControl_t7938625C5F8D3D576FD985184592BD427E487F38* L_32 = __this->___gunCtrl_4;
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_32, (bool)0, NULL);
-		// Cursor.visible = true;
-		Cursor_set_visible_m612FCB2E86C15F91CE2E6148D1B556667954A2B7((bool)1, NULL);
-		// Cursor.lockState = CursorLockMode.None;
-		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(0, NULL);
 	}
 
-IL_010d:
+IL_0101:
 	{
 		// }
 		return;

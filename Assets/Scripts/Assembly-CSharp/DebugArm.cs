@@ -57,8 +57,6 @@ public class DebugArm : MonoBehaviour
 		currentObject = obj;
 		GameObject gameObject = Object.Instantiate(obj.preview, holder, worldPositionStays: false);
 		menu.gameObject.SetActive(value: false);
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
 		cameraCtrl.enabled = true;
 		gunCtrl.enabled = true;
 		if ((bool)currentPreview)
@@ -107,8 +105,6 @@ public class DebugArm : MonoBehaviour
 			menu.gameObject.SetActive(value: true);
 			cameraCtrl.enabled = false;
 			gunCtrl.enabled = false;
-			Cursor.visible = true;
-			Cursor.lockState = CursorLockMode.None;
 		}
 	}
 }
