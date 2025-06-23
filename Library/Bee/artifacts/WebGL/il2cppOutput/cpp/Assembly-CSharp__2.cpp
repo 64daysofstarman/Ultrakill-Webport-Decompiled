@@ -604,6 +604,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral9AE3EE34B5EEB797662AEC4359DE12525C7D7B98
 IL2CPP_EXTERN_C String_t* _stringLiteral9C21AB4AE98671990F9AB215EBDEBFEF9CADC5DC;
 IL2CPP_EXTERN_C String_t* _stringLiteral9FDA958DD94224F800A3E376B197B98E538530E8;
 IL2CPP_EXTERN_C String_t* _stringLiteralA342A21830446E346FEB553B2E3D5F296B4A55E3;
+IL2CPP_EXTERN_C String_t* _stringLiteralA89DBAA61DF85DBF5B50CC5D4743DB9516350188;
 IL2CPP_EXTERN_C String_t* _stringLiteralA8D63BC82709C6924593CA18F5C4BC1A2489B33A;
 IL2CPP_EXTERN_C String_t* _stringLiteralAC173E4FA065F34E208E6CC1B91E8B21070AD1E7;
 IL2CPP_EXTERN_C String_t* _stringLiteralAC94E0709856C33DDAE5BF781A8BBACA9887910A;
@@ -633,6 +634,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralD5578B72D304AFA49BDAC802A46F913D971904AE
 IL2CPP_EXTERN_C String_t* _stringLiteralD5A452629A6951D5E4720EF7E7A64D1036BD109F;
 IL2CPP_EXTERN_C String_t* _stringLiteralD7A59EABF0C51AF863757F81CFC978C0C90E24B3;
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+IL2CPP_EXTERN_C String_t* _stringLiteralDC66EAA07D0168A2FCE821E2EF0BAB5C3238C43B;
 IL2CPP_EXTERN_C String_t* _stringLiteralDC79AF724389A8F4DAB11124578A82E08466FDB9;
 IL2CPP_EXTERN_C String_t* _stringLiteralDF6C9C82433C835DAA6AB9C00F6C7F021E184E17;
 IL2CPP_EXTERN_C String_t* _stringLiteralE1DCB4F477B88C40BCF6631D96592E6D561C1590;
@@ -6051,8 +6053,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsyncOperation_tD2789250E4B098DEDA92B366A577E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AsyncOperation_get_isDone_m68A0682777E2132FC033182E9F50303566AA354D (AsyncOperation_tD2789250E4B098DEDA92B366A577E500A92D2D3C* __this, const RuntimeMethod* method) ;
 // System.Void System.NotSupportedException::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
-// UnityEngine.CursorLockMode UnityEngine.Cursor::get_lockState()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Cursor_get_lockState_m9AD145AFB215DFEDA0074AC1F129EF02CCE5B632 (const RuntimeMethod* method) ;
 // System.Void UnityEngine.Cursor::set_lockState(UnityEngine.CursorLockMode)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9 (int32_t ___0_value, const RuntimeMethod* method) ;
 // UnityEngine.EventSystems.PointerInputModule/MouseState UnityEngine.EventSystems.PointerInputModule::GetMousePointerEventData(System.Int32)
@@ -11332,39 +11332,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadNextLevelU3Ed__67_Syste
 // UnityEngine.EventSystems.PointerInputModule/MouseState FirstPersonInputModule::GetMousePointerEventData(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* FirstPersonInputModule_GetMousePointerEventData_mA262EA64E2547AE7F87D82983B159ECD078C7F2A (FirstPersonInputModule_t1B339DFD361B31D002606FFAF3595B1A509CB6AC* __this, int32_t ___0_id, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
-		// CursorLockMode lockState = Cursor.lockState;
-		int32_t L_0;
-		L_0 = Cursor_get_lockState_m9AD145AFB215DFEDA0074AC1F129EF02CCE5B632(NULL);
-		V_0 = L_0;
 		// Cursor.lockState = CursorLockMode.None;
 		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(0, NULL);
-		// MouseState mousePointerEventData = base.GetMousePointerEventData(id);
-		int32_t L_1 = ___0_id;
-		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_2;
-		L_2 = PointerInputModule_GetMousePointerEventData_m8D8111399CF7077AEBE4836AC701DDDF3F5ADFC5(__this, L_1, NULL);
-		// Cursor.lockState = lockState;
-		int32_t L_3 = V_0;
-		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(L_3, NULL);
-		// return mousePointerEventData;
-		return L_2;
+		// var mouseState = base.GetMousePointerEventData(id);
+		int32_t L_0 = ___0_id;
+		MouseState_tCCE70861DE1EEECF949AFE8E2A922541D4E08A09* L_1;
+		L_1 = PointerInputModule_GetMousePointerEventData_m8D8111399CF7077AEBE4836AC701DDDF3F5ADFC5(__this, L_0, NULL);
+		// Cursor.lockState = CursorLockMode.Locked;
+		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(1, NULL);
+		// return mouseState;
+		return L_1;
 	}
 }
 // System.Void FirstPersonInputModule::ProcessMove(UnityEngine.EventSystems.PointerEventData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirstPersonInputModule_ProcessMove_m679083BA677E18576B7C10D5612E731AE08E7C17 (FirstPersonInputModule_t1B339DFD361B31D002606FFAF3595B1A509CB6AC* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_pointerEvent, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		// CursorLockMode lockState = Cursor.lockState;
-		int32_t L_0;
-		L_0 = Cursor_get_lockState_m9AD145AFB215DFEDA0074AC1F129EF02CCE5B632(NULL);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDC66EAA07D0168A2FCE821E2EF0BAB5C3238C43B);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
 		// Cursor.lockState = CursorLockMode.None;
 		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(0, NULL);
 		// base.ProcessMove(pointerEvent);
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_1 = ___0_pointerEvent;
-		PointerInputModule_ProcessMove_m3555F333D82A446C2354D8855034323BF7C9208A(__this, L_1, NULL);
-		// Cursor.lockState = lockState;
-		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(L_0, NULL);
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_pointerEvent;
+		PointerInputModule_ProcessMove_m3555F333D82A446C2354D8855034323BF7C9208A(__this, L_0, NULL);
+		// Cursor.lockState = CursorLockMode.Locked;
+		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(1, NULL);
+		// Debug.Log("Process Move");
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralDC66EAA07D0168A2FCE821E2EF0BAB5C3238C43B, NULL);
 		// }
 		return;
 	}
@@ -11372,17 +11373,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirstPersonInputModule_ProcessMove_m6790
 // System.Void FirstPersonInputModule::ProcessDrag(UnityEngine.EventSystems.PointerEventData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirstPersonInputModule_ProcessDrag_m875B4423DCEB148535084B47347566FE0038D59A (FirstPersonInputModule_t1B339DFD361B31D002606FFAF3595B1A509CB6AC* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_pointerEvent, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		// CursorLockMode lockState = Cursor.lockState;
-		int32_t L_0;
-		L_0 = Cursor_get_lockState_m9AD145AFB215DFEDA0074AC1F129EF02CCE5B632(NULL);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA89DBAA61DF85DBF5B50CC5D4743DB9516350188);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
 		// Cursor.lockState = CursorLockMode.None;
 		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(0, NULL);
 		// base.ProcessDrag(pointerEvent);
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_1 = ___0_pointerEvent;
-		PointerInputModule_ProcessDrag_m73FE39BFACC950DCA7FDD7BDC67F45484DC01207(__this, L_1, NULL);
-		// Cursor.lockState = lockState;
-		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(L_0, NULL);
+		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_pointerEvent;
+		PointerInputModule_ProcessDrag_m73FE39BFACC950DCA7FDD7BDC67F45484DC01207(__this, L_0, NULL);
+		// Cursor.lockState = CursorLockMode.Locked;
+		Cursor_set_lockState_mD81F6E5F3D86506FFB88567689A3A00A7AD242E9(1, NULL);
+		// Debug.Log("Process Drag");
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA89DBAA61DF85DBF5B50CC5D4743DB9516350188, NULL);
 		// }
 		return;
 	}

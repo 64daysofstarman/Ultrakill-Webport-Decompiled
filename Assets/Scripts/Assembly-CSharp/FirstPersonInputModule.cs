@@ -3,28 +3,24 @@ using UnityEngine.EventSystems;
 
 public class FirstPersonInputModule : StandaloneInputModule
 {
-	protected override MouseState GetMousePointerEventData(int id)
-	{
-		CursorLockMode lockState = Cursor.lockState;
+    protected override MouseState GetMousePointerEventData(int id) {
 		Cursor.lockState = CursorLockMode.None;
-		MouseState mousePointerEventData = base.GetMousePointerEventData(id);
-		Cursor.lockState = lockState;
-		return mousePointerEventData;
+		var mouseState = base.GetMousePointerEventData(id);
+		Cursor.lockState = CursorLockMode.Locked;
+		return mouseState;
 	}
 
-	protected override void ProcessMove(PointerEventData pointerEvent)
-	{
-		CursorLockMode lockState = Cursor.lockState;
+	protected override void ProcessMove(PointerEventData pointerEvent) {
 		Cursor.lockState = CursorLockMode.None;
 		base.ProcessMove(pointerEvent);
-		Cursor.lockState = lockState;
-    }
+		Cursor.lockState = CursorLockMode.Locked;
+		Debug.Log("Process Move");
+	}
 
-	protected override void ProcessDrag(PointerEventData pointerEvent)
-	{
-		CursorLockMode lockState = Cursor.lockState;
+	protected override void ProcessDrag(PointerEventData pointerEvent) {
 		Cursor.lockState = CursorLockMode.None;
 		base.ProcessDrag(pointerEvent);
-		Cursor.lockState = lockState;
+		Cursor.lockState = CursorLockMode.Locked;
+		Debug.Log("Process Drag");
 	}
 }

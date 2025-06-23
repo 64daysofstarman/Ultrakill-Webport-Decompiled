@@ -9,6 +9,7 @@ public class KEEPMOUSEINGAYBABYJAIL : MonoBehaviour
     public GameObject OptionsMenu;
     public GameObject Intro;
     public GameObject Intro2;
+	//public GameObject Shop;
     public bool UsingIntro;
     void Update()
     {
@@ -17,6 +18,14 @@ public class KEEPMOUSEINGAYBABYJAIL : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+		//if(Shop.activeSelf)
+		//{
+		    //Cursor.lockState = CursorLockMode.Locked;
+			//if(Input.GetButtonDown("Fire1"))
+			//{
+			//Cursor.lockState = CursorLockMode.None;
+			//}
+		//}
         if (UsingIntro == true)
         {
             if (Intro.activeSelf || Intro2.activeSelf)

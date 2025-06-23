@@ -42,5 +42,35 @@ public class ShopButton : MonoBehaviour, IPointerClickHandler, IEventSystemHandl
 		{
 			Object.Instantiate(failSound);
 		}
+
 	}
+	public void BackupClick()
+	{
+			GameObject[] array = toActivate;
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i].SetActive(value: true);
+		}
+		array = toDeactivate;
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i].SetActive(value: false);
+		}
+		if (!failure)
+		{
+			if (variationInfo != null)
+			{
+				variationInfo.WeaponBought();
+			}
+			if (clickSound != null)
+			{
+				Object.Instantiate(clickSound);
+			}
+		}
+		else if (failure && failSound != null)
+		{
+			Object.Instantiate(failSound);
+		}
+	}
+	
 }
