@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Screenmaterial
-  m_Shader: {fileID: 4800000, guid: 667a5917fe68e514e888f38d0836f7b0, type: 3}
+  m_Shader: {fileID: 4800000, guid: 81e3b2a0a6cd3bb4d9e07391cb051be2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -40,10 +40,10 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TextureWarping: 0.3
+    - _TextureWarping: 0.6
     - _UVSec: 0
     - _VertexWarpScale: 1
-    - _VertexWarping: 160
+    - _VertexWarping: 9999
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}

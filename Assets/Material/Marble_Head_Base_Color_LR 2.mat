@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Marble_Head_Base_Color_LR 2
-  m_Shader: {fileID: 4800000, guid: 2287d8633a121de40a9abf4caefd355e, type: 3}
+  m_Shader: {fileID: 4800000, guid: f350dfbe8b73f1f448a2bf7289450f90, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -44,9 +44,9 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TextureWarping: 0.3
+    - _TextureWarping: 0.6
     - _UVSec: 0
-    - _VertexWarping: 160
+    - _VertexWarping: 9999
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.588, g: 0.588, b: 0.588, a: 1}

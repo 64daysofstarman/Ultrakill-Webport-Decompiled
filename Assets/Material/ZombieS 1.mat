@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ZombieS 1
-  m_Shader: {fileID: 4800000, guid: e51f0e77c225d504698a8da44f7c1a94, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6d0d57d3e1ee64149a8918104b4b01e9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -26,8 +26,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _TextureWarping: 0.3
+    - _TextureWarping: 0.6
     - _VertexWarpScale: 1
-    - _VertexWarping: 160
+    - _VertexWarping: 9999
     m_Colors: []
   m_BuildTextureStacks: []

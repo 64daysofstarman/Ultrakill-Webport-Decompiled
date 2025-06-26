@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PelaajaUVlow
+  m_Name: PelaajaUVlow_0
   m_Shader: {fileID: 4800000, guid: c43179693d878774fa3fcb87ff9a869f, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -40,10 +40,10 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TextureWarping: 0.3
+    - _TextureWarping: 0.6
     - _UVSec: 0
     - _VertexWarpScale: 1
-    - _VertexWarping: 160
+    - _VertexWarping: 9999
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
