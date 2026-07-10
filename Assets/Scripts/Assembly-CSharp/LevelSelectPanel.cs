@@ -90,7 +90,7 @@ public class LevelSelectPanel : MonoBehaviour
 				challengeChecker.SetActive(value: true);
 			}
 		}
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/lvl", levelNumber, "progress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/lvl", levelNumber, "progress.bepis");
 		if (File.Exists(path))
 		{
 			Debug.Log("Found Level " + levelNumber + " Data");
