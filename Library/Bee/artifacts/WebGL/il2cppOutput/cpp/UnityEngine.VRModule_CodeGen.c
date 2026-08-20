@@ -12,13 +12,9 @@
 
 
 
-// 0x00000001 System.Boolean UnityEngine.XR.XRSettings::get_isDeviceActive()
 extern void XRSettings_get_isDeviceActive_m0C8A5F7EC76EF392020137915E4DD8E75EBDD6B8 (void);
-// 0x00000002 System.Int32 UnityEngine.XR.XRSettings::get_eyeTextureWidth()
 extern void XRSettings_get_eyeTextureWidth_m3B18AF3F3382398E2A818B2B01AA1FE90FEB3AAF (void);
-// 0x00000003 System.Int32 UnityEngine.XR.XRSettings::get_eyeTextureHeight()
 extern void XRSettings_get_eyeTextureHeight_mCF4B2EC6851A8B8A8C4E6FC085A621B3166DB67A (void);
-// 0x00000004 System.Void UnityEngine.XR.XRDevice::InvokeDeviceLoaded(System.String)
 extern void XRDevice_InvokeDeviceLoaded_mBE2198DE44A72E2F5059566C46B9907D82782790 (void);
 static Il2CppMethodPointer s_methodPointers[4] = 
 {
@@ -29,10 +25,10 @@ static Il2CppMethodPointer s_methodPointers[4] =
 };
 static const int32_t s_InvokerIndices[4] = 
 {
-	6480,
-	6493,
-	6493,
-	6422,
+	7515,
+	7528,
+	7528,
+	7438,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule = 
@@ -50,7 +46,7 @@ const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule =
 	0,
 	NULL,
 	NULL,
-	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

@@ -7,7 +7,7 @@ public static class GameProgressSaver
 	public static void SaveProgress(int levelnum)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/difficulty", PlayerPrefs.GetInt("Diff", 2), "progress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/difficulty", PlayerPrefs.GetInt("Diff", 2), "progress.bepis");
 		if (File.Exists(path))
 		{
 			try
@@ -48,7 +48,7 @@ public static class GameProgressSaver
 	public static int GetProgress(int difficulty)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/difficulty", difficulty, "progress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/difficulty", difficulty, "progress.bepis");
 		if (File.Exists(path))
 		{
 			try
@@ -75,7 +75,7 @@ public static class GameProgressSaver
 	public static void AddGear(string gear)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			GameProgressMoneyAndGear gameProgressMoneyAndGear;
@@ -165,7 +165,7 @@ public static class GameProgressSaver
 	public static int CheckGear(string gear)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			if (File.Exists(path))
@@ -230,7 +230,7 @@ public static class GameProgressSaver
 	public static void LoadGear()
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			if (File.Exists(path))
@@ -314,7 +314,7 @@ public static class GameProgressSaver
 	public static void AddMoney(int money)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			GameProgressMoneyAndGear gameProgressMoneyAndGear;
@@ -345,7 +345,7 @@ public static class GameProgressSaver
 	public static int GetMoney()
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			if (File.Exists(path))
@@ -368,7 +368,7 @@ public static class GameProgressSaver
 	public static bool GetIntro()
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			if (File.Exists(path))
@@ -394,8 +394,8 @@ public static class GameProgressSaver
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
 		try
 		{
-			Directory.CreateDirectory(string.Concat(Directory.GetParent(Application.dataPath), "/Saves"));
-			string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+			Directory.CreateDirectory(string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves"));
+			string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 			GameProgressMoneyAndGear gameProgressMoneyAndGear;
 			FileStream fileStream;
 			if (File.Exists(path))
@@ -424,7 +424,7 @@ public static class GameProgressSaver
 	public static bool GetTutorial()
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			if (File.Exists(path))
@@ -450,8 +450,8 @@ public static class GameProgressSaver
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
 		try
 		{
-			Directory.CreateDirectory(string.Concat(Directory.GetParent(Application.dataPath), "/Saves"));
-			string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+			Directory.CreateDirectory(string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves"));
+			string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 			GameProgressMoneyAndGear gameProgressMoneyAndGear;
 			FileStream fileStream;
 			if (File.Exists(path))
@@ -480,7 +480,7 @@ public static class GameProgressSaver
 	public static int GetSecretMission(int missionNumber)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			if (File.Exists(path))
@@ -507,7 +507,7 @@ public static class GameProgressSaver
 	public static void FoundSecretMission(int missionNumber)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			GameProgressMoneyAndGear gameProgressMoneyAndGear;
@@ -541,7 +541,7 @@ public static class GameProgressSaver
 	public static void SetSecretMission(int missionNumber)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/generalprogress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/generalprogress.bepis");
 		try
 		{
 			GameProgressMoneyAndGear gameProgressMoneyAndGear;

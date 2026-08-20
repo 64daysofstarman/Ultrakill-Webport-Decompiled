@@ -7,7 +7,7 @@ public static class RankSaveSystem
 	public static void SaveRank(StatsManager sman)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/lvl", sman.levelNumber, "progress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/lvl", sman.levelNumber, "progress.bepis");
 		RankData graph = new RankData(sman);
 		FileStream fileStream = new FileStream(path, FileMode.Create);
 		binaryFormatter.Serialize(fileStream, graph);
@@ -17,7 +17,7 @@ public static class RankSaveSystem
 	public static void ChallengeComplete()
 	{
 		StatsManager component = GameObject.FindWithTag("RoomManager").GetComponent<StatsManager>();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/lvl", component.levelNumber, "progress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/lvl", component.levelNumber, "progress.bepis");
 		Debug.Log("RSS Step 1");
 		if (File.Exists(path))
 		{
@@ -52,7 +52,7 @@ public static class RankSaveSystem
 	public static void SecretFound(int secretnum)
 	{
 		StatsManager component = GameObject.FindWithTag("RoomManager").GetComponent<StatsManager>();
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/lvl", component.levelNumber, "progress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/lvl", component.levelNumber, "progress.bepis");
 		if (File.Exists(path))
 		{
 			BinaryFormatter binaryFormatter = new BinaryFormatter();

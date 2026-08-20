@@ -102,7 +102,7 @@ public class StatsManager : MonoBehaviour
 		{
 			player.GetComponent<Rigidbody>().velocity = Vector3.down * 100f;
 		}
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/lvl", levelNumber, "progress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/lvl", levelNumber, "progress.bepis");
 		try
 		{
 			if (File.Exists(path))

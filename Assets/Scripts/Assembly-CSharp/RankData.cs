@@ -21,7 +21,7 @@ public class RankData
 	public RankData(StatsManager sman)
 	{
 		int @int = PlayerPrefs.GetInt("Diff", 2);
-		string path = string.Concat(Directory.GetParent(Application.dataPath), "/Saves/lvl", sman.levelNumber, "progress.bepis");
+		string path = string.Concat(Directory.GetParent(Application.persistentDataPath), "/Saves/lvl", sman.levelNumber, "progress.bepis");
 		levelNumber = sman.levelNumber;
 		if (File.Exists(path))
 		{

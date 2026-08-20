@@ -10,9 +10,7 @@
 
 
 
-// System.Char[]
 struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
-// System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 
 struct Activity_t53E2C1F6D94F3B49CB7664498D8FDF4376A9E373_marshaled_pinvoke;
@@ -32,41 +30,28 @@ IL2CPP_EXTERN_C_END
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-
-// System.ValueType
 struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
 {
 };
-// Native definition for P/Invoke marshalling of System.ValueType
 struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
 {
 };
-// Native definition for COM marshalling of System.ValueType
 struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
 {
 };
-
-// System.Enum
 struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
 {
 };
-// Native definition for P/Invoke marshalling of System.Enum
 struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
 {
 };
-// Native definition for COM marshalling of System.Enum
 struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
 {
 };
-
-// System.IntPtr
 struct IntPtr_t 
 {
-	// System.Void* System.IntPtr::m_value
-	void* ___m_value_0;
+	void* ___m_value;
 };
-
-// System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
 {
 	union
@@ -77,74 +62,32 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
 	};
 };
-
-// Discord.ActivityActionType
 struct ActivityActionType_tEEDF639C4D71CC6879D73D3A0052993F070C96D3 
 {
-	// System.Int32 Discord.ActivityActionType::value__
-	int32_t ___value___2;
+	int32_t ___value__;
 };
-
-// Discord.ImageType
 struct ImageType_tE3A1F9A1C8DAA2E596A81DE86F6301B84CEDF8ED 
 {
-	// System.Int32 Discord.ImageType::value__
-	int32_t ___value___2;
+	int32_t ___value__;
 };
-
-// Discord.LogLevel
 struct LogLevel_t77A3EB8D5191CC2F89EF11D6CEAE5EEDEB233830 
 {
-	// System.Int32 Discord.LogLevel::value__
-	int32_t ___value___2;
+	int32_t ___value__;
 };
-
-// Discord.Result
 struct Result_t846D4BAAFA46461387320605C665DBDCB6BE7933 
 {
-	// System.Int32 Discord.Result::value__
-	int32_t ___value___2;
+	int32_t ___value__;
 };
-
-// Discord.ImageHandle
 struct ImageHandle_tA46594C516D84414879A28F2C811A07E95E26742 
 {
-	// Discord.ImageType Discord.ImageHandle::Type
-	int32_t ___Type_0;
-	// System.Int64 Discord.ImageHandle::Id
-	int64_t ___Id_1;
-	// System.UInt32 Discord.ImageHandle::Size
-	uint32_t ___Size_2;
+	int32_t ___Type;
+	int64_t ___Id;
+	uint32_t ___Size;
 };
-
-// System.IntPtr
 struct IntPtr_t_StaticFields
 {
-	// System.IntPtr System.IntPtr::Zero
-	intptr_t ___Zero_1;
+	intptr_t ___Zero;
 };
-
-// System.IntPtr
-
-// System.Void
-
-// System.Void
-
-// Discord.ActivityActionType
-
-// Discord.ActivityActionType
-
-// Discord.LogLevel
-
-// Discord.LogLevel
-
-// Discord.Result
-
-// Discord.Result
-
-// Discord.ImageHandle
-
-// Discord.ImageHandle
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

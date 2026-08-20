@@ -6,3 +6,11 @@ Update Mode: updateDependencies
 
 The following packages were added:
   com.unity.ide.visualstudio@2.0.22
+
+=== Thu Jul  9 17:43:59 2026
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.ai.navigation@1.1.6
